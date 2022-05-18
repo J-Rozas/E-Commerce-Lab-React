@@ -7,6 +7,7 @@ import beans from '../assets/img/beans.jpg'
 const ItemsContainer = () => {
 
   const [items, setItems] = useState([]);
+  const [customer, setCustomer] = useState({'name': 'Customer', 'basket':[], 'cash': 400});
 
   const givenItems = [
     {'name': 'Bread', 'price': 1, 'description': 'Some really great bread', 'img':`${bread}`},
@@ -18,9 +19,16 @@ const ItemsContainer = () => {
     setItems(givenItems);
   }, [])
 
+  const updateCustomerBasket = (item) => {
+    const copyBasket = [...customer.basket];
+    copyBasket.push(item);
+    const nextCustomer = {...customer, basket: copyBasket};
+    setCustomer(nextCustomer)
+  }
+
   return (
     <>
-      <ItemsList items={items}></ItemsList>
+      <ItemsList items={items} updateCustomerBasket={updateCustomerBasket}></ItemsList>
     </>
   )
 }
