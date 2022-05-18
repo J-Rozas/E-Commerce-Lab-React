@@ -4,7 +4,7 @@ import ItemsContainer from './containers/ItemsContainer';
 function App() {
   return (
     <>
-      <h1>Test</h1>
+      <h1>Item shop</h1>
       <ItemsContainer></ItemsContainer>
     </>
   );
