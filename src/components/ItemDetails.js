@@ -15,6 +15,8 @@ const Button = styled.button`
 	padding: 6px 13px;
 	text-decoration: none;
 	text-shadow: 0px 1px 0px #263666;
+  width: 10rem;
+  margin-top: 2%;
   &:hover {
     background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
 	  background-color: #415989;
@@ -24,6 +26,14 @@ const Button = styled.button`
   	top: 1px;
   }
 `;
+
+const Image = styled.img`
+  display: block;
+  width: 10rem;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 10px rgba(0,0,0,0.5);
+`
 
 
 const ItemDetail = ({item, updateCustomerBasket}) => {
@@ -37,7 +47,7 @@ const ItemDetail = ({item, updateCustomerBasket}) => {
       <p>{item.name}</p>
       <p>{item.description}</p>
       <p>{item.price}</p>
-      <img src={item.img} width='100' height='auto'></img>
+      <Image src={item.img}></Image>
       <Button onClick={handleClick} value={item.name}>Add item</Button>
     </div>
   )
