@@ -33,8 +33,8 @@ const ItemsContainer = () => {
       <h2>
         Basket:
       </h2>
-      <BasketList items={customer.basket}></BasketList>
       <p>Number of items: {customer.basket.length}</p>
+      <BasketList items={customer.basket}></BasketList>
     </>
   )
 }
