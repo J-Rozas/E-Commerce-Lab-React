@@ -7,7 +7,7 @@ const Button = styled.button`
 	background-color: #2e466e;
 	border-radius: 17px;
 	border: 1px solid #1f2f47;
-	display: inline-block;
+	display: block;
 	cursor: pointer;
 	color: #ffffff;
 	font-family: Arial;
