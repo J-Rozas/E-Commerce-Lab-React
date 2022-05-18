@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import ItemsList from "../components/ItemsList";
+import BasketList from "../components/BasketList";
 import bread from '../assets/img/bread.jpg'
 import bananas from '../assets/img/bananas.jpg'
 import beans from '../assets/img/beans.jpg'
@@ -29,6 +30,11 @@ const ItemsContainer = () => {
   return (
     <>
       <ItemsList items={items} updateCustomerBasket={updateCustomerBasket}></ItemsList>
+      <h2>
+        Basket:
+      </h2>
+      <BasketList items={customer.basket}></BasketList>
+      <p>Number of items: {customer.basket.length}</p>
     </>
   )
 }
